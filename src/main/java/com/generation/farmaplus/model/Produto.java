@@ -1,6 +1,6 @@
 package com.generation.farmaplus.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -37,7 +37,7 @@ private Long preco;
 private Long estoque;
 
 @NotNull(message = "O atributo validade é obrigatório!")
-private LocalDateTime validade;
+private LocalDate validade;
 
 @ManyToOne
 @JsonIgnoreProperties("produto")
@@ -87,11 +87,11 @@ public void setEstoque(Long estoque) {
 this.estoque = estoque;
 }
 
-public LocalDateTime getValidade() {
+public LocalDate getValidade() {
 return validade;
 }
 
-public void setValidade(LocalDateTime validade) {
+public void setValidade(LocalDate validade) {
 this.validade = validade;
 }
 
